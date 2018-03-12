@@ -1,0 +1,100 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	
+		MessageBoard	
+	
+	</title>
+</head>
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+</head>
+<body>
+	<div class="row">
+		<div class="col-xs-offset-2 col-xs-8">
+			<div class="panel panel-default">
+			  <div class="panel-heading">Message</div>
+			  <div class="panel-body">
+			  	
+			  	<form action="" method="post" id="messagesform" style="word-break:break-all">
+				
+				{%for mess in messages%}
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-4">
+								<p class="username">{{mess.username}}</p>
+							</div>
+							
+							<div class="col-xs-6 text-center">
+								<p class="postdate">{{mess.date}}</p>
+							</div>
+							
+							<div class="col-xs-2 text-right">
+								<input type='image' name="del" value='{{mess.pk}}' src='http://i.imgur.com/xUYgurd.png' width='30' height='30' onClick='document.messagesform.submit();'> 
+							</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<p>{{mess.content}}</p>
+					</div>		
+
+				</div>
+
+				{%endfor%}
+				
+				</form>
+			   
+			  </div>
+			  	<div class="panel-footer">
+					<form action="" method="post" id="usrform">
+	                			<input type="text" name="username" class="form-control" placeholder="username...">
+	                			<br>
+	                			<textarea name="mes" class="form-control" rows="5" placeholder="content..."></textarea>				
+	                			<br>
+	                			<input type='image' name="del" value='Submit' src='https://imgur.com/PaIFJf4.png' width='15%' onClick='document.usrform.submit();'>	
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	
+	var x = document.getElementsByName("username");
+	x[0].value = getQueryVariable("username");
+
+	function getQueryVariable(variable)
+	{
+	   var query = window.location.search.substring(1);
+	   var vars = query.split("&");
+	   for (var i=0;i<vars.length;i++) {
+	           var pair = vars[i].split("=");
+	           if(pair[0] == variable){
+	           	return pair[1];
+	           }
+	   }
+	   return "";
+	}
+
+</script>
+
+
+</html>
+<head>
