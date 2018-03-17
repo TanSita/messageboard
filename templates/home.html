@@ -4,21 +4,50 @@
 <html>
 <head>
  	<link rel="shortcut icon" href="http://icons.veryicon.com/ico/Application/iOS8%20Cirtangle%20Concept/Message.ico">
-	<title>
-		MessageBoard	
-	</title>
+
+	<title> MessageBoard </title>
+	<meta charset="utf-8">
+
+	<!-- bootstrap.css -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jquery 要先放 , bs會用到-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+
+	<!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script> new WOW().init(); </script>
+
+
+    <!-- Something about smoothTouchScroll -->
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.kinetic.min.js"></script>
+    <script src="js/jquery.smoothTouchScroll.min.js"></script>
+
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!-- smoothTouchScroll.css -->
+    <link rel="Stylesheet" type="text/css" href="css/smoothTouchScroll.css" />
+    
+    
+    <!-- sweet alert -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.css">
+    
+
+    <!-- import our css -->
+	<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
 </head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
-
-
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
-
-</head>
 <body onload="startTime()">
     <div id="TWclock" class="text-center">
     </div>
