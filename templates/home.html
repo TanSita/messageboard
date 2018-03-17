@@ -23,12 +23,12 @@
 
 </head>
 <body onload="startTime()">
-    <div id="clock">
-    	台灣時間：
+    <p>台灣時間：</p>
+    <div id="TWclock">
     </div>
 
-    <div id="clock">
-    	美國時間：
+    <p>美國時間：</p>
+    <div id="USclock">
     </div>
 
 	<div class="row">
@@ -111,7 +111,8 @@
 		var ss = today.getSeconds();
 		mm = checkTime(mm);
 		ss = checkTime(ss);
-		document.getElementById('clock').innerHTML = hh + ":" + mm + ":" + ss;
+		document.getElementById('TWclock').innerHTML = hh + ":" + mm + ":" + ss;
+		document.getElementById('USclock').innerHTML = hh + ":" + mm + ":" + ss;
 		var timeoutId = setTimeout(startTime, 500);
 	}
 
