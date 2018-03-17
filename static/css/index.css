@@ -8,7 +8,7 @@ p.postdate
 	margin-top: 5px;
 }
 
-#TWclock
+.clock
 {
 	color:white;
 	font: 2em sans-serif; 
@@ -17,19 +17,6 @@ p.postdate
 	padding: 5px;
 	border: solid gray 2px; 
 	border-radius: 10px;
-	width:140px;
-	text-align:center;
-}
-
-#USclock
-{
-	color:white;
-	font: 2em sans-serif; 
-	background: black; 
-	margin: 5px;
-	padding: 5px;
-	border: solid gray 2px; 
-	border-radius: 10px;
-	width:250px;
+	width:100%;
 	text-align:center;
 }
